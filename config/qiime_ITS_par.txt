@@ -1,0 +1,37 @@
+
+pick_otus:denovo_otu_id_prefix	Otu
+
+pick_otus:enable_rev_strand_match True
+
+pick_rep_set:rep_set_picking_method	longest
+
+#assign_taxonomy:similarity	0.9865
+
+assign_taxonomy:assignment_method	rdp
+
+assign_taxonomy:rdp_max_memory	20000
+
+assign_taxonomy:id_to_taxonomy_fp /home/yangchao/16S/its_12_11_otus/taxonomy/97_otu_taxonomy.txt
+
+assign_taxonomy:reference_seqs_fp /home/yangchao/16S/its_12_11_otus/rep_set/97_otus.fasta
+
+alpha_diversity:metrics chao1,goods_coverage,observed_species,shannon,simpson
+
+beta_diversity:metrics bray_curtis
+
+summarize_taxa:level 2,3,4,5,6,7
+
+plot_taxa_summary:labels Phylum,Class,Order,Family,Genus,Species
+
+plot_taxa_summary:chart_type area,bar,pie
+
+make_emperor:color_by Treatment
+
+make_distance_boxplots:suppress_all_within True
+
+make_distance_boxplots:suppress_all_between True
+
+make_distance_boxplots:suppress_individual_within True
+
+make_distance_boxplots:fields Treatment
+
